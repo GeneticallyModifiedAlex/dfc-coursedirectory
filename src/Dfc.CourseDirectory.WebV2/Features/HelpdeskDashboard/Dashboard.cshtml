@@ -38,8 +38,8 @@
             </div>
             <div class="pttcd-provider-dashboard__card__actions">
                 <ul class="govuk-list pttcd-list--small">
-                    <li><a asp-controller="ApprenticeshipQA" asp-action="ListProviders" class="govuk-link">Live course providers report</a></li>
-                    <li><a asp-controller="ApprenticeshipQA" asp-action="Report" class="govuk-link">Live courses report</a></li>
+                    <li><a asp-controller="ApprenticeshipQA" asp-action="ListProviders" data-testid="download-opendata-live-courseproviders-report-link" class="govuk-link">Live course providers report</a></li>
+                    <li><a asp-controller="ApprenticeshipQA" asp-action="Report" data-testid="download-opendata-live-courses-report-link" class="govuk-link">Live courses report</a></li>
                 </ul>
             </div>
         </div>
@@ -52,18 +52,18 @@
             <div class="pttcd-provider-dashboard__card__content">
                 <h2 class="govuk-heading-s">Courses</h2>
                 <div class="pttcd-provider-dashboard__count">
-                    <h2>0</h2>
+                    <h2 data-testid="CoursesCount">0</h2>
                     <p>Courses on Find a course</p>
                 </div>
 
                 <div class="pttcd-provider-dashboard__count">
-                    <h2>0</h2>
+                    <h2 data-testid="OutofDateCoursesCount">0</h2>
                     <p>Out of date courses</p>
                 </div>
             </div>
             <div class="pttcd-provider-dashboard__card__actions">
                 <ul class="govuk-list pttcd-list--small">
-                    <li><a asp-controller="ProviderReports" asp-action="ProviderTypeReport" class="govuk-link" data-testid="download-provider-type-report-link">Out of date courses report</a></li>
+                    <li><a asp-controller="ProviderReports" asp-action="OutofDateCourses" class="govuk-link" data-testid="download-provider-outofdatecourses-report-link">Out of date courses report</a></li>
                 </ul>
             </div>
         </div>

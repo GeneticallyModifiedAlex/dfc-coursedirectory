@@ -32,5 +32,11 @@ namespace Dfc.CourseDirectory.WebV2.Features.Providers.Reporting
         public Task<IActionResult> ProvidersMissingPrimaryContact() =>
             _mediator.SendAndMapResponse<IAsyncEnumerable<ProviderMissingPrimaryContactReport.Csv>, IActionResult>(new ProviderMissingPrimaryContactReport.Query(),
                 records => new CsvResult<ProviderMissingPrimaryContactReport.Csv>($"{nameof(ProviderMissingPrimaryContactReport)}-{_clock.UtcNow:yyyyMMddHHmmss}.csv", records));
+
+        [HttpGet("out-of-date-courses")]
+        public Task<IActionResult> OutofDateCourses() =>
+            _mediator.SendAndMapResponse<IAsyncEnumerable<OutOfDateCoursesReport.Csv>, IActionResult>(new OutOfDateCoursesReport.Query(),
+                records => new CsvResult<OutOfDateCoursesReport.Csv>($"{nameof(OutOfDateCoursesReport)}-{_clock.UtcNow:yyyyMMddHHmmss}.csv", records));
+
     }
 }
