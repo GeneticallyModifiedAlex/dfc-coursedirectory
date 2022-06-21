@@ -168,6 +168,14 @@ namespace Dfc.CourseDirectory.WebV2.Features.ChooseQualification
             return await _mediator.SendAndMapResponse(query, vm => View(vm));
         }
 
+        [RequireProviderContext]
+        [HttpGet("add/check-and-publish/published")]
+        public IActionResult Published()
+        {
+            return View();
+        }
+
+
     }
 }
 
