@@ -299,7 +299,7 @@ else
 
                     <a class="govuk-link" href="@Url.Action("Index", "CourseSummary",new { courseRun.CourseId, courseRun.CourseRunId})" aria-labelledby="view_or_edit_course @Html.Raw(courseRun.CourseRunId+"_name")">
                         View or edit course
-                        <span class="course-link-tooltip govuk-visually-hidden">View or edit course: @courseRun.CourseName</span>
+                        <span class="course-link-tooltip">View or edit course: @courseRun.CourseName</span>
                     </a>
 
                     <a class="govuk-link"
@@ -314,7 +314,7 @@ else
                        asp-route-courseRunId="@courseRun.CourseRunId"
                        asp-route-publishMode="@PublishMode.Summary" aria-labelledby="copy_course @Html.Raw(courseRun.CourseRunId+"_name")">
                         Copy course
-                        <span class="course-link-tooltip" class="govuk-visually-hidden">Copy course: @courseRun.CourseName</span>
+                        <span class="course-link-tooltip">Copy course: @courseRun.CourseName</span>
                     </a>
 
 
@@ -323,7 +323,7 @@ else
                        asp-route-courseRunId="@courseRun.CourseRunId"
                        asp-route-returnUrl="@Url.Action("Index", "ProviderCourses")" aria-labelledby="delete_course @Html.Raw(courseRun.CourseRunId+"_name")">
                         Delete course
-                        <span class="course-link-tooltip govuk-visually-hidden">Delete course: @courseRun.CourseName</span>
+                        <span class="course-link-tooltip">Delete course: @courseRun.CourseName</span>
                     </a>
 
 
@@ -342,9 +342,9 @@ else
         display: none;
         background: #fff;
         border: 1px solid #000;
-        text-align: center;
         width: auto;
         height: auto;
+        padding: 2px 5px;
         z-index: 1;
     }
 
